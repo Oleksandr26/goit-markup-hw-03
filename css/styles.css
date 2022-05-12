@@ -38,6 +38,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .list {
     margin: 0 0;
+    padding: 0 0;
     list-style: none;
 
 }
@@ -50,12 +51,19 @@ h1,h2,h3,h4,h5,h6,p{
 .page-header{
     background-color: var(--white-text-color);
 }
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 /* Logo */
 .accent {
     color: var(--accent-color);
 }
 
 .logo {
+    margin-right: 93px;
+
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -67,6 +75,9 @@ h1,h2,h3,h4,h5,h6,p{
 /* Site-nav */
 .site-nav .link,
 .header-contact.link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     font-weight: 500;
     font-size: 14px;
@@ -74,12 +85,25 @@ h1,h2,h3,h4,h5,h6,p{
     letter-spacing: 0.02em;
     color: var(--title-text-color);
 }
+.site-nav{
+    display: flex;
+}
+.site-nav-item:not(:last-child){
+    margin-right: 50px;
+}
 
 .site-nav .link.current{
     color: var(--accent-color);
 }
 
 /* Contacts */
+.contact{
+    display: flex;
+    margin-left: auto;
+}
+.contact-item:not(:last-child){
+margin-right: 50px;
+}
 .header-contact.link {
     color: inherit;
 }
@@ -98,10 +122,15 @@ h1,h2,h3,h4,h5,h6,p{
 
 /* Hero */
 .hero{
+    margin: auto;
+    width: 1600px;
+    height: 600px;
     background-color: var(--footer-bg-color);
     text-align: center;
 }
 .hero-title {
+    margin-bottom: 30px;
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -111,6 +140,10 @@ h1,h2,h3,h4,h5,h6,p{
 
 }
 .button{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    min-width: 200px;
+    
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -120,9 +153,6 @@ h1,h2,h3,h4,h5,h6,p{
     background-color: var(--accent-color);
     color: var(--white-text-color);
     cursor: pointer;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    min-width: 200px;    
 }
 .button:hover,
 .button:focus{
@@ -131,7 +161,13 @@ h1,h2,h3,h4,h5,h6,p{
 }
 /* Our Skills */
 .about-list{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
     padding: 94px 0;
+}
+.about-list-item{
+    width: 270px;
 }
 .about-title{
     font-size: 14px;
@@ -142,15 +178,34 @@ h1,h2,h3,h4,h5,h6,p{
 .about-text{
     margin-top: 10px;
 }
+/* --What are we doing-- */
+
 .section-title{
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     color: var(--title-text-color);
+    margin-bottom: 50px;
+}
+.job-list{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 94px;
 }
 /* Team */
 .team{
     background-color: var(--background-team-color);
+}
+.section-title.team{
+    padding-top: 94px;
+}
+.team-list{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 94px;
+}
+.team-list-item{
+
 }
 .team-subtitle{
     font-weight: 500;
@@ -169,12 +224,15 @@ h1,h2,h3,h4,h5,h6,p{
 
 .logo.footer {
     color: var(--white-text-color);
+    margin-bottom: 20px;
+    display: block;
 }
 
 .address {
     font-style: normal;
     text-decoration: none;
     color: var(--white-text-color);
+
 }
 
 .footer-contact {
