@@ -33,8 +33,11 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
 .list {
+    margin: 0 0;
     list-style: none;
 
 }
@@ -44,6 +47,9 @@ body {
 }
 
 /* Header */
+.page-header{
+    background-color: var(--white-text-color);
+}
 /* Logo */
 .accent {
     color: var(--accent-color);
@@ -82,19 +88,27 @@ body {
 .link:focus {
     color: var(--accent-color);
 }
+.container{
+    margin: 0 auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 3px solid green;
+}
 
 /* Hero */
 .hero{
     background-color: var(--footer-bg-color);
+    text-align: center;
 }
 .hero-title {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color:var(--white-text-color);
+
 }
 .button{
     font-family: inherit;
@@ -106,6 +120,9 @@ body {
     background-color: var(--accent-color);
     color: var(--white-text-color);
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    min-width: 200px;    
 }
 .button:hover,
 .button:focus{
@@ -113,11 +130,17 @@ body {
     background-color: var(--footer-bg-color);
 }
 /* Our Skills */
+.about-list{
+    padding: 94px 0;
+}
 .about-title{
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--title-text-color);
+}
+.about-text{
+    margin-top: 10px;
 }
 .section-title{
     font-size: 36px;
